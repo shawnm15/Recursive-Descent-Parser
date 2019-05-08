@@ -1,0 +1,106 @@
+
+String src = ""
+		+ "program bitwise;"
+		+ "  var x, y, z: integer;"
+		+ "  begin"
+		+ "    z := 3;"
+		+ "    z := x + y * 7;"
+		+ "    z := 0"
+		+ " end\n";
+		
+		
+String src = ""
+		+ "program bitwise;"
+		+ "  var x, y: integer;"
+		+ "  begin"
+		+ "    if x > 0 then x := 0"
+		+ " end\n";
+		
+String src = ""
+		+ "program p;"
+		+ "  type T = array [3..9] of integer;"
+		+ "  type U = record f: boolean; g: T end;"
+		+ "  var z: T;"
+		+ "  var x: U;"
+		+ "  var y: integer;"
+		+ "  begin"
+		+ "    z[y] := 9"
+		+ " end\n";
+		
+String src = ""
+		+ "program arithmetic;"
+		+ "  var x, y: integer;"
+		+ "  procedure QuotRem(x, y: integer);"
+		+ "    var q, r: integer;"
+		+ "    begin q := 0; r := x;"
+		+ "      { q * y + r = x and r >= y }"
+		+ "      while r >= y do"
+		+ "        begin r := r - y; q := q + 1"
+		+ "        end;"
+		+ "      write(q); write(r); writeln"
+		+ "    end;"
+		+ "  begin"
+		+ "    read(x); read(y);"
+		+ "    QuotRem(x, y)"
+		+ " end\n";
+		
+		
+String src = ""
+		+ "program p;"
+		+ "  type R = record f, g: boolean end;"
+		+ "  type S = array [1..11] of R;"
+		+ "  type T = array [3..9] of S;"
+		+ "  var x: T;"
+		+ "  var y: integer;"
+		+ "  begin"
+		+ "    x[y][5].g := false;"
+		+ "    x[y][y + 1].f := true"
+		+ " end\n";
+		
+String src = " program p;\r\n" + 
+		"        var x, y, z, q: integer;\r\n" + 
+		"        procedure function(x, y: integer);\r\n" + 
+		"          begin q := 0;\r\n" + 
+		"            while q <= 100 do\r\n" + 
+		"              begin q := q + 1;\r\n" + 
+		"                z := 3;\r\n" + 
+		"                z := x + y * 75 - 12;\r\n" + 
+		"                if z > 0\r\n" + 
+		"                then x := 100\r\n" + 
+		"                else x := 50;\r\n" + 
+		"                if z < 100\r\n" + 
+		"                then z := 46\r\n" + 
+		"                else z := 13\r\n" + 
+		"              end;\r\n" + 
+		"            write(q); writeln\r\n" + 
+		"          end;\r\n" + 
+		"        begin\r\n" + 
+		"            if x>0 then write(7) else write(9);\r\n" + 
+		"            if z>100 then write(45) else write(0);\r\n" + 
+		"          read(x); read(y);\r\n" + 
+		"          function(x, y)\r\n" + 
+		"        end\n";
+		
+String src = "        program p;" + 
+		"          const seven = (9 mod 3 + 5 * 3) div 2;" + 
+		"          type int = integer;" + 
+		"          var x, y: integer;" + 
+		"          procedure q;" + 
+		"            const sotrue = true and true;" + 
+		"            const sofalse = false and true;" + 
+		"            const alsotrue = false or true;" + 
+		"            const alsofalse = false or false;" + 
+		"            var x: int;" + 
+		"            begin x := 3;" + 
+		"              if sotrue then y := x else y := seven;" + 
+		"              write(y); {writes 3}" + 
+		"              if sofalse then y := x else y := seven;" + 
+		"              write(y); {writes 7}" + 
+		"              if alsotrue then y := x else y := seven;" + 
+		"              write(y); {writes 3}" + 
+		"              if alsofalse then y := x else y := seven;" + 
+		"              write(y); {writes 7}" + 
+		"              if not(true or false) then write(5) else write(9)" + 
+		"            end;" + 
+		"          begin x := 7; q(); write(x) {writes 7}" + 
+		"          end\n";
